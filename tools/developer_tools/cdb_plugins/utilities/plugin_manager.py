@@ -254,13 +254,13 @@ class PluginManager():
 
         listItemFormat = '*%4s - %-' + str(width - 36) + 's %-6s %-6s %-12s*'
 
-        print('\nSaved plugins are located in plug-in directory: %s' % self.plugin_storage_directory
-        print('for xhtml, java, python (s = stored d=deployed)'
+        print '\nSaved plugins are located in plug-in directory: %s' % self.plugin_storage_directory
+        print 'for xhtml, java, python (s = stored d=deployed)'
 
-        print("\n%s %s %s" % (header_before, title, header_after))
-        print(listItemFormat % ('#', 'Plugin Name', 'Xhtml', 'Java', 'Python'))
+        print "\n%s %s %s" % (header_before, title, header_after)
+        print listItemFormat % ('#', 'Plugin Name', 'Xhtml', 'Java', 'Python')
         column_header_seperator = '-' * (width-2)
-        print('*%s*' % (column_header_seperator))
+        print '*%s*' % (column_header_seperator)
         for i in range(0, selection_list.__len__()):
             plugin = selection_list[i]
             xhtml = ''
