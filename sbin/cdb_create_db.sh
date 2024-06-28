@@ -98,6 +98,7 @@ if [ -z "$CDB_DB_USER_PASSWORD" ]; then
 	echo
     fi
 fi
+echo "Using user password $CDB_DB_PASSWORD"
 if [ -z "$CDB_DB_PASSWORD" ]; then
     echo "$CDB_DB_USER user password cannot be empty."
     exit 1
