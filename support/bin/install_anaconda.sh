@@ -13,7 +13,7 @@ cd `dirname $0`/.. && topDir=`pwd`
 srcDir=$topDir/src
 buildDir=$topDir/build
 anacondaInstallDir=$topDir/anaconda/$CDB_HOST_ARCH
-anacondaFileName="Anaconda2-${ANACONDA_VERSION}-Linux-x86_64.sh"
+anacondaFileName="Anaconda3-${ANACONDA_VERSION}-Linux-x86_64.sh"
 
 echo $anacondaFileName
 
