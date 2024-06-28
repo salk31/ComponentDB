@@ -77,6 +77,7 @@ echo "Using DB scripts directory: $CDB_DB_SCRIPTS_DIR"
 
 # Read password if needed
 if [ -z "$CDB_DB_ADMIN_PASSWORD" ]; then
+    echo "Request CDB_DB_ADMIN_PASSWORD"
     sttyOrig=`stty -g`
     stty -echo
     read -p "Enter DB root password: " CDB_DB_ADMIN_PASSWORD
@@ -92,6 +93,7 @@ if [ -z "$CDB_DB_USER_PASSWORD" ]; then
     if [ -f $CDB_DB_PASSWD_FILE ]; then
 	CDB_DB_PASSWORD=`cat $CDB_DB_PASSWD_FILE`
     else
+        echo "Request CDB_DB_USER"
 	sttyOrig=`stty -g`
 	stty -echo
 	read -p "Enter DB password for the $CDB_DB_USER user: " CDB_DB_PASSWORD
@@ -125,6 +127,7 @@ fi
 
 mysqlCmd="mysql --port=$CDB_DB_PORT --host=$CDB_DB_HOST -u $CDB_DB_ADMIN_USER"
 if [ ! -z "$CDB_DB_ADMIN_PASSWORD" ]; then
+    echo "Sam found the admin password"
     mysqlCmd="$mysqlCmd -p$CDB_DB_ADMIN_PASSWORD"
 fi
 
@@ -156,6 +159,7 @@ for host in $CDB_DB_ADMIN_HOSTS; do
     IDENTIFIED BY '$CDB_DB_PASSWORD';" >> $sqlFile
 done
 execute "$mysqlCmd < $sqlFile"
+echo "Done first funny one"
 # create db tables
 mysqlCmd="$mysqlCmd -D $CDB_DB_NAME <"
 execute $mysqlCmd create_cdb_tables.sql
