@@ -62,9 +62,9 @@ class PluginManager():
         options.append(CDB_INSTALL_PLUGIN_DIRECTORY)
         options.append('Specify different directory.')
 
-        print 'Select directory for storage of cdb plugins: '
+        print('Select directory for storage of cdb plugins: ')
         for i in range(0, options.__len__()):
-            print '%i - %s' % (i, options[i])
+            print('%i - %s' % (i, options[i]))
 
         selection = raw_input("%i %s [%i]: " % (i, options[i], default_option))
         if selection is None or selection == '':
