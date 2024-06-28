@@ -13,7 +13,7 @@ cd `dirname $0`/.. && topDir=`pwd`
 srcDir=$topDir/src
 buildDir=$topDir/build
 anacondaInstallDir=$topDir/anaconda/$CDB_HOST_ARCH
-anacondaFileName="Anaconda3-${ANACONDA_VERSION}-Linux-x86_64.sh"
+anacondaFileName="Anaconda2-${ANACONDA_VERSION}-Linux-x86_64.sh"
 
 echo $anacondaFileName
 
@@ -35,7 +35,4 @@ if [ -f $anacondaFileName ]; then
 
     echo "Installing anaconda"
     sh $anacondaFileName $batch $skip $path
-    
-    echo "XXXXXXXX $path"
-    conda install python=2.7
 fi
