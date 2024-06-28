@@ -35,4 +35,7 @@ if [ -f $anacondaFileName ]; then
 
     echo "Installing anaconda"
     sh $anacondaFileName $batch $skip $path
+    
+    echo "XXXXXXXX $path"
+    conda install python=2.7
 fi
