@@ -52,6 +52,7 @@ deployConfigFile=$CDB_INSTALL_DIR/etc/${CDB_DB_NAME}.deploy.conf
 if [ -f $deployConfigFile ]; then
     echo "Using deployment config file: $deployConfigFile"
     . $deployConfigFile
+    echo "CDB_DB_ADMIN_PASSWORD = $CDB_DB_ADMIN_PASSWORD"
 else
     echo "Deployment config file $deployConfigFile not found, using defaults"
 fi
@@ -78,11 +79,7 @@ echo "Using DB scripts directory: $CDB_DB_SCRIPTS_DIR"
 # Read password if needed
 if [ -z "$CDB_DB_ADMIN_PASSWORD" ]; then
     echo "Request CDB_DB_ADMIN_PASSWORD"
-    sttyOrig=`stty -g`
-    stty -echo
-    read -p "Enter DB root password: " CDB_DB_ADMIN_PASSWORD
-    stty $sttyOrig
-    echo
+    CDB_DB_ADMIN_PASSWORD=blahfoo
 fi
 
 
