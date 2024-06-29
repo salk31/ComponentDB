@@ -3,6 +3,7 @@
 # Copyright (c) UChicago Argonne, LLC. All rights reserved.
 # See LICENSE file.
 
+echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 currentDir=`pwd`
 cd `dirname $0`/.. && topDir=`pwd`
