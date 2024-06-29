@@ -281,8 +281,8 @@ class PluginManager():
                 xhtml += 'd'
 
 
-            print listItemFormat % (str(i), plugin.plugin_name, xhtml, java, python)
-        print '*' * width
+            print(listItemFormat % (str(i), plugin.plugin_name, xhtml, java, python))
+        print('*' * width)
 
 if __name__ == '__main__':
     plugin_manager = PluginManager()
