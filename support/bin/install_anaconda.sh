@@ -3,7 +3,7 @@
 # Copyright (c) UChicago Argonne, LLC. All rights reserved.
 # See LICENSE file.
 
-ANACONDA_VERSION=2020.02
+ANACONDA_VERSION=2019.10
 
 CDB_HOST_ARCH=$(uname -sm | tr -s '[:upper:][:blank:]' '[:lower:][\-]')
 
@@ -13,7 +13,7 @@ cd `dirname $0`/.. && topDir=`pwd`
 srcDir=$topDir/src
 buildDir=$topDir/build
 anacondaInstallDir=$topDir/anaconda/$CDB_HOST_ARCH
-anacondaFileName="Anaconda3-${ANACONDA_VERSION}-Linux-x86_64.sh"
+anacondaFileName="Anaconda2-${ANACONDA_VERSION}-Linux-x86_64.sh"
 
 echo $anacondaFileName
 
