@@ -99,13 +99,15 @@ tar cf $PASSWORD_TAR_FILE $PASSWORD_FILES
 #$ASADMIN_CMD change-master-password --savemasterpassword=true $PAYARA_DOMAIN_NAME || exit 1
 
 # Read new master password
-echo
-echo "Changing master password"
-sttyOrig=`stty -g`
-stty -echo
-read -p "Enter master password: " MASTER_PASSWORD
-stty $sttyOrig
-echo
+#echo
+#echo "Changing master password"
+#sttyOrig=`stty -g`
+#stty -echo
+#read -p "Enter master password: " MASTER_PASSWORD
+#stty $sttyOrig
+#echo
+MASTER_PASSWORD="Foo"
+
 
 # Change master password
 tmpFile=/tmp/`basename $0`.`id -u`.tmp
