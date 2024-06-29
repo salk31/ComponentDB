@@ -3,8 +3,8 @@
 # Copyright (c) UChicago Argonne, LLC. All rights reserved.
 # See LICENSE file.
 
-JAVA_VERSION=8u111
-JDK_VERSION=8u111-b14
+JAVA_VERSION=11+28
+JDK_VERSION=jdk11
 
 CMS_HOST_ARCH=$(uname -sm | tr -s '[:upper:][:blank:]' '[:lower:][\-]')
 
