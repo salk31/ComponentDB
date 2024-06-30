@@ -106,7 +106,7 @@ tar cf $PASSWORD_TAR_FILE $PASSWORD_FILES
 #read -p "Enter master password: " MASTER_PASSWORD
 #stty $sttyOrig
 #echo
-MASTER_PASSWORD="Foo"
+MASTER_PASSWORD="changeit"
 
 
 # Change master password
