@@ -120,9 +120,9 @@ $tmpFile
 # two certificates in keystore.jks, and many additional ones in cacerts.jks.
 echo
 echo "Checking master password: list keystore certificates"
-$KEYTOOL_CMD -list -v -keystore $payaraInstallDir/glassfish/domains/$PAYARA_DOMAIN_NAME/config/keystore.jks --storepass $MASTER_PASSWORD  || exit 1
+$KEYTOOL_CMD -list -v -keystore $payaraInstallDir/glassfish/domains/$PAYARA_DOMAIN_NAME/config/keystore.jks --storepass $MASTER_PASSWORD > /dev/null || exit 1
 echo "Checking master password: list ca certificates"
-$KEYTOOL_CMD -list -v -keystore $payaraInstallDir/glassfish/domains/$PAYARA_DOMAIN_NAME/config/cacerts.jks --storepass $MASTER_PASSWORD  || exit 1
+$KEYTOOL_CMD -list -v -keystore $payaraInstallDir/glassfish/domains/$PAYARA_DOMAIN_NAME/config/cacerts.jks --storepass $MASTER_PASSWORD > /dev/null || exit 1
 
 # start glassfish
 echo
