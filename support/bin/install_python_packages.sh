@@ -17,7 +17,7 @@ echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX before click"
 $binDir/install_click.sh || exit 1
 echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX before python ldap"
 #$binDir/install_python_ldap.sh || exit 1
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+curl https://bootstrap.pypa.io/pip/2.6/get-pip.py --output get-pip.py
 chmod u+x get-pip.py
 ./get-pip.py # should install in conda env?  - if this then chmod
 #conda install pip # conda not on path yet
