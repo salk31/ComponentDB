@@ -124,6 +124,12 @@ $KEYTOOL_CMD -list -v -keystore $payaraInstallDir/glassfish/domains/$PAYARA_DOMA
 echo "Checking master password: list ca certificates"
 $KEYTOOL_CMD -list -v -keystore $payaraInstallDir/glassfish/domains/$PAYARA_DOMAIN_NAME/config/cacerts.jks --storepass $MASTER_PASSWORD > /dev/null || exit 1
 
+
+echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX exit early here, like it did before keytool was fixed"
+exit 0
+
+
+
 # start glassfish
 echo
 echo "Starting glassfish"
