@@ -17,8 +17,9 @@ echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX before click"
 $binDir/install_click.sh || exit 1
 echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX before python ldap"
 #$binDir/install_python_ldap.sh || exit 1
+pip install python-ldap
 echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX before pip"
-$binDir/install_pip.sh || exit 1
+#$binDir/install_pip.sh || exit 1
 echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX before sphinx"
 $binDir/install_sphinx.sh || exit 1
 echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX before twine"
