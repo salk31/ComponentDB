@@ -69,7 +69,10 @@ fi
 
 # copy mysql driver
 echo "Copying mysql driver"
-rsync -ar $CDB_ROOT_DIR/src/java/CdbWebPortal/lib/mariadb-java-client-3.1.0.jar $GLASSFISH_DIR/glassfish/domains/${CDB_DOMAIN}/lib/
+rsync -ar $CDB_ROOT_DIR/src/java/CdbWebPortal/lib/mariadb-java-client-3.1.0.jar $GLASSFISH_DIR/glassfish/domains/${CDB_DOMAIN}/lib/ext/
+
+# this is just because I'm getting bored... or could it be permissions thing now?
+rsync -ar $CDB_ROOT_DIR/src/java/CdbWebPortal/lib/mariadb-java-client-3.1.0.jar /ComponentDB/support/payara/linux-x86_64/glassfish/lib/
 
 # restart server
 echo "Restarting glassfish"
